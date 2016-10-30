@@ -1,0 +1,22 @@
+
+	
+	/*
+	 * Stop thread
+	 */
+	private static void stop(){
+		thread.interrupt();
+		label.setLocation((int)(Math.random()*668), -32);
+	}
+	/*
+	 * Location label
+	 */
+	public static void setLoc(){
+		int y=label.getY();
+		y+=10;
+		if(y>=380){
+			stop();
+			System.out.println("hasav");
+		}
+		label.setLocation(label.getX(), label.getY()+1);
+		
+	}
